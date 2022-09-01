@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import {
   fetchMovieShowDetails,
   getAllMovieShowsDetails,
+  removeDetails,
 } from "../../features/movies/movieSlice";
 import "./MovieDetail.scss";
 const MovieDetail = () => {
@@ -13,6 +14,9 @@ const MovieDetail = () => {
   useEffect(() => {
     console.log("Detaisl", data);
     dispatch(fetchMovieShowDetails(imdbID));
+    return () => {
+      dispatch(removeDetails());
+    };
   }, [dispatch, imdbID]);
 
   return (
