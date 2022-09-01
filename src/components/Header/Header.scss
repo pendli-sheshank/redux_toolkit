@@ -6,13 +6,25 @@
   padding: 0px 40px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+.second-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .logo {
   color: $font-primary;
   font-size: 20px;
   font-weight: 600;
 }
+.nav-link {
+  color: $font-primary;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0px 15px 0px 15px;
+}
+
 .user-img,
 .user-img img {
   width: 38px;
